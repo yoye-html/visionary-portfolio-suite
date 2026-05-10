@@ -77,7 +77,7 @@ export const Hero = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-tight"
           >
             Hi, I'm{" "}
-            <span className="gradient-text">John Doe</span>
+            <span className="gradient-text">Yenesew zb</span>
           </motion.h1>
 
           <motion.div
