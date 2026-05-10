@@ -13,7 +13,7 @@ export const Footer = () => {
             viewport={{ once: true }}
             className="text-sm text-muted-foreground"
           >
-            © {currentYear} John Doe. All rights reserved.
+            © {currentYear} Yenesew zb. All rights reserved.
           </motion.p>
           <motion.p
             initial={{ opacity: 0 }}
