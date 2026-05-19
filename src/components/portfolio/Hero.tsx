@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { ProfilePortrait } from "./ProfilePortrait";
 
-const roles = ["Creative Developer", "UI/UX Designer", "Digital Builder"];
+const roles = ["Aspiring Cybersecurity Analyst", "Security Problem Solver", "Digital Defense Builder"];
 
 export const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -63,6 +64,15 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="mb-10 flex justify-center"
+          >
+            <ProfilePortrait sizeClass="w-48 h-48 md:w-60 md:h-60" compact />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full glass-card text-sm text-muted-foreground">
@@ -76,8 +86,8 @@ export const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-6 leading-tight"
           >
-            Hi, I'm{" "}
-            <span className="gradient-text">Yenesew zb</span>
+            Yenesew{" "}
+            <span className="gradient-text">Bekele</span>
           </motion.h1>
 
           <motion.div
@@ -94,10 +104,11 @@ export const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg text-muted-foreground max-w-2xl mx-auto mb-12"
+            className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12"
           >
-            I craft exceptional digital experiences that blend creativity with technical excellence.
-            Turning complex ideas into elegant, user-centric solutions.
+            Focused on securing systems, understanding technology deeply, and building impactful digital solutions.
+            <br />
+            From Ethiopia to the world, I'm driven by the mission of making digital infrastructure safer and education accessible for everyone.
           </motion.p>
 
           <motion.div
@@ -112,7 +123,7 @@ export const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground font-medium glow-primary transition-shadow hover:shadow-2xl"
             >
-              View My Work
+              View Projects
             </motion.a>
             <motion.a
               href="#contact"
@@ -120,7 +131,7 @@ export const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 rounded-full glass-card border border-white/20 text-foreground font-medium hover:bg-white/5 transition-colors"
             >
-              Get In Touch
+              Contact Me
             </motion.a>
           </motion.div>
         </div>

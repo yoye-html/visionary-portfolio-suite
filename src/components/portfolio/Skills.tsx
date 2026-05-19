@@ -3,39 +3,41 @@ import { useRef } from "react";
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Cybersecurity Skills",
+    icon: "🔐",
     skills: [
-      { name: "React", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Next.js", level: 88 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Framer Motion", level: 85 },
+      { name: "Security Fundamentals", level: 85 },
+      { name: "Risk Analysis", level: 80 },
+      { name: "Threat Awareness", level: 85 },
+      { name: "Network Basics", level: 78 },
+      { name: "Digital Safety", level: 82 },
+      { name: "Problem Solving", level: 90 },
     ],
   },
   {
-    title: "Backend",
+    title: "Technical Skills",
+    icon: "💻",
     skills: [
-      { name: "Node.js", level: 88 },
-      { name: "Python", level: 82 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "GraphQL", level: 80 },
-      { name: "AWS", level: 75 },
+      { name: "Research & Analysis", level: 88 },
+      { name: "Data Analysis", level: 82 },
+      { name: "Technology Systems", level: 85 },
+      { name: "AI/ML Fundamentals", level: 75 },
+      { name: "UX/UI Fundamentals", level: 80 },
+      { name: "Systems Thinking", level: 87 },
     ],
   },
   {
-    title: "Design",
+    title: "Professional Skills",
+    icon: "🎯",
     skills: [
-      { name: "Figma", level: 90 },
-      { name: "UI/UX Design", level: 88 },
-      { name: "Prototyping", level: 85 },
-      { name: "Design Systems", level: 82 },
+      { name: "Communication", level: 88 },
+      { name: "Team Collaboration", level: 85 },
+      { name: "Critical Thinking", level: 92 },
+      { name: "Adaptability", level: 89 },
+      { name: "Leadership", level: 83 },
+      { name: "Creativity", level: 86 },
     ],
   },
-];
-
-const tools = [
-  "Git", "Docker", "Vercel", "Supabase", "Prisma", "Redux", 
-  "Vite", "Jest", "Cypress", "Storybook", "Linear", "Notion"
 ];
 
 export const Skills = () => {
@@ -56,79 +58,59 @@ export const Skills = () => {
             className="text-center mb-16"
           >
             <span className="text-primary text-sm font-medium tracking-wider uppercase mb-4 block">
-              Expertise
+              Core Competencies
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Skills & <span className="gradient-text">Technologies</span>
+              Skills & <span className="gradient-text">Expertise</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A comprehensive toolkit built through years of solving complex problems 
-              and delivering exceptional results.
+              A comprehensive blend of cybersecurity knowledge, technical proficiency, and professional capabilities built through continuous learning and real-world experience.
             </p>
           </motion.div>
 
-          {/* Skill categories */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {skillCategories.map((category, categoryIndex) => (
+          <div className="grid md:grid-cols-3 gap-8">
+            {skillCategories.map((category, catIndex) => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
-                className="glass-card p-6 rounded-2xl"
+                transition={{ duration: 0.6, delay: catIndex * 0.1 }}
+                className="glass-card rounded-2xl p-8 border border-white/10 hover:border-primary/50 transition-colors"
               >
-                <h3 className="text-xl font-display font-bold mb-6 gradient-text">
+                <div className="text-4xl mb-4">{category.icon}</div>
+                <h3 className="text-xl font-display font-bold mb-6 text-foreground">
                   {category.title}
                 </h3>
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between mb-2">
-                        <span className="text-sm font-medium">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                <div className="space-y-5">
+                  {category.skills.map((skill, index) => (
+                    <motion.div
+                      key={skill.name}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={isInView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.4, delay: catIndex * 0.1 + index * 0.05 }}
+                    >
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-sm font-medium text-foreground">
+                          {skill.name}
+                        </span>
+                        <span className="text-xs text-primary font-semibold">
+                          {skill.level}%
+                        </span>
                       </div>
-                      <div className="h-2 rounded-full bg-secondary overflow-hidden">
+                      <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={isInView ? { width: `${skill.level}%` } : {}}
-                          transition={{
-                            duration: 1,
-                            delay: categoryIndex * 0.1 + skillIndex * 0.1 + 0.5,
-                            ease: "easeOut",
-                          }}
-                          className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
+                          transition={{ duration: 0.8, delay: catIndex * 0.1 + index * 0.05 }}
+                          className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
                         />
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
             ))}
           </div>
-
-          {/* Tools */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center"
-          >
-            <h3 className="text-xl font-display font-bold mb-6">Tools & Platforms</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {tools.map((tool, index) => (
-                <motion.span
-                  key={tool}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="px-4 py-2 rounded-full glass-card text-sm font-medium border border-white/10 hover:border-primary/50 transition-colors cursor-default"
-                >
-                  {tool}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

@@ -4,49 +4,36 @@ import { ProjectCard } from "./ProjectCard";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce solution with seamless checkout experience, real-time inventory management, and AI-powered recommendations.",
-    tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop",
+    title: "EduBridge Innovators",
+    description: "An adaptive educational platform designed to help underserved students access learning materials through SMS, voice systems, and offline mobile applications. Combines educational technology with accessibility-first design to reach communities with limited digital infrastructure.",
+    tags: ["EdTech", "Accessibility", "Mobile", "Voice Systems", "SMS Integration"],
+    image: "https://images.unsplash.com/photo-1516534775068-bb57846d9c2d?w=800&h=600&fit=crop",
+    liveUrl: "#",
+    githubUrl: "#",
+    featured: true,
+  },
+  {
+    title: "Project Gasha",
+    description: "Advanced cybersecurity and systems analysis project focused on digital defense mechanisms and threat intelligence. Demonstrates expertise in identifying vulnerabilities, analyzing attack vectors, and implementing strategic security solutions.",
+    tags: ["Cybersecurity", "Systems Analysis", "Threat Intelligence", "Security Architecture"],
+    image: "https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&h=600&fit=crop",
+    liveUrl: "#",
+    githubUrl: "https://github.com/yoye-html/Project_Gasha",
+    featured: true,
+  },
+  {
+    title: "Digital Safety Awareness Campaign",
+    description: "Educational initiative focused on raising awareness about cybersecurity threats, digital privacy, and safe online practices for underserved communities.",
+    tags: ["Cybersecurity", "Education", "Community", "Digital Literacy"],
+    image: "https://images.unsplash.com/photo-1526374965328-7f5ae4e8a311?w=800&h=600&fit=crop",
     liveUrl: "#",
     githubUrl: "#",
   },
   {
-    title: "SaaS Dashboard",
-    description: "Analytics dashboard with real-time data visualization, custom reporting, and team collaboration features.",
-    tags: ["Next.js", "TypeScript", "D3.js", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "AI Writing Assistant",
-    description: "An intelligent writing tool powered by GPT-4 that helps users create compelling content with style suggestions.",
-    tags: ["Python", "OpenAI", "React", "FastAPI"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Mobile Fitness App",
-    description: "Cross-platform fitness application with workout tracking, nutrition planning, and social challenges.",
-    tags: ["React Native", "Firebase", "Redux", "Expo"],
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&h=600&fit=crop",
-    liveUrl: "#",
-  },
-  {
-    title: "Real Estate Platform",
-    description: "Property listing platform with virtual tours, mortgage calculator, and neighborhood insights.",
-    tags: ["Vue.js", "Three.js", "MongoDB", "AWS"],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    title: "Podcast Network",
-    description: "Audio streaming platform with personalized recommendations, offline listening, and creator analytics.",
-    tags: ["Next.js", "GraphQL", "Prisma", "S3"],
-    image: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&h=600&fit=crop",
+    title: "Security Fundamentals Research",
+    description: "In-depth research and analysis on cybersecurity fundamentals, threat landscapes, and defensive strategies tailored for emerging markets.",
+    tags: ["Research", "Cybersecurity", "Threat Analysis", "Documentation"],
+    image: "https://images.unsplash.com/photo-1518611505868-48510c2e8af4?w=800&h=600&fit=crop",
     liveUrl: "#",
   },
 ];
@@ -75,11 +62,11 @@ export const Projects = () => {
               Featured Work
             </span>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
-              Selected <span className="gradient-text">Projects</span>
+              Projects & <span className="gradient-text">Initiatives</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A curated selection of projects that showcase my expertise in building 
-              modern, scalable, and beautiful digital products.
+              A selection of impactful projects that demonstrate my commitment to solving real-world problems 
+              through technology and strategic thinking.
             </p>
           </motion.div>
 

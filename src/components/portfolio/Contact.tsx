@@ -3,10 +3,10 @@ import { useRef, useState } from "react";
 import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/yoye-html", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/yenesew-bekele", label: "LinkedIn" },
   { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@johndoe.dev", label: "Email" },
+  { icon: Mail, href: "mailto:yenesew.bekele@email.com", label: "Email" },
 ];
 
 export const Contact = () => {
@@ -53,8 +53,8 @@ export const Contact = () => {
               Let's <span className="gradient-text">Connect</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Have a project in mind or just want to chat? I'd love to hear from you. 
-              Send me a message and let's create something amazing together.
+              Interested in collaborating on cybersecurity projects, internships, or scholarship opportunities? 
+              Let's connect and explore how we can work together.
             </p>
           </motion.div>
 
@@ -148,10 +148,10 @@ export const Contact = () => {
                   Reach out directly at:
                 </p>
                 <a
-                  href="mailto:hello@johndoe.dev"
+                  href="mailto:yenesew.bekele@email.com"
                   className="text-lg font-medium gradient-text hover:opacity-80 transition-opacity"
                 >
-                  hello@johndoe.dev
+                  yenesew.bekele@email.com
                 </a>
               </div>
 

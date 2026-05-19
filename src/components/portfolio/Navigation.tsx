@@ -3,8 +3,10 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Career", href: "#goals" },
+  { label: "Timeline", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -35,7 +37,7 @@ export const Navigation = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          JD
+          YB
         </motion.a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -45,7 +47,7 @@ export const Navigation = () => {
               href={item.href}
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: index * 0.1 + 0.3 }}
+              transition={{ delay: index * 0.05 + 0.3 }}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
             >
               {item.label}
@@ -63,7 +65,7 @@ export const Navigation = () => {
           whileTap={{ scale: 0.95 }}
           className="hidden md:block px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground text-sm font-medium glow-primary"
         >
-          Let's Talk
+          Contact
         </motion.a>
 
         {/* Mobile menu button */}
